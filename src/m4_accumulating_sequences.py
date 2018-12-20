@@ -6,8 +6,8 @@ one item at a time, using the ACCUMULATOR pattern.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Nihaar Munnamgi.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -72,6 +72,10 @@ def make_simple_list(m, n):
     # TODO: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
+    sequence = []
+    for k in range (m, n + 1):
+        sequence = sequence + [k]
+    return sequence
 
 
 def run_test_make_simple_string():
@@ -87,6 +91,10 @@ def run_test_make_simple_string():
     print('--------------------------------------------------')
     print('Testing the   make_simple_string   function:')
     print('--------------------------------------------------')
+    expected = [5-6-7-8-9-10-11-12-13]
+    actual = make_simple_string(5, 13)
+    print('Expected:', expected)
+    print('Actual:  ', actual)
 
 
 def make_simple_string(m, n):
@@ -113,7 +121,10 @@ def make_simple_string(m, n):
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
-
+    sequence = ''
+    for k in range(m, n + 1):
+        sequence = sequence + str(k)
+    return sequence
 
 def run_test_make_less_simple_string():
     """ Tests the   make_less_simple_string    function. """
